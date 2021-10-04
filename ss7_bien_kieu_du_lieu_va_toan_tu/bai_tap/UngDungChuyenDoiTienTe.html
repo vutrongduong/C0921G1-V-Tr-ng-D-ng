@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+<form>
+<div>
+    <label>Amonunt</label>
+    <label>Form Currency</label>
+    <label>To Currency</label><br></div>
+    <input type="text"id="sotien">
+    <select>
+      <option>Việt Nam</option>
+    </select>
+    <select>
+        <option>USD</option>
+    </select>
+    <button type="button" onclick="tinhtoan()">Convert</button></label><br>
+    <br>
+    <label style="color: blue">Result:</label>
+    <label id="ketqua" style="color: blue"  >
+</label>
+</form>
+</body>
+<script>
+    function tinhtoan() {
+        let a = document.getElementById("sotien").value;
+        a = parseInt(a);
+        let b = a*0.000043878894251864855;
+        document.getElementById('ketqua').innerText =b;
+    }
+</script>
+
+</html>
