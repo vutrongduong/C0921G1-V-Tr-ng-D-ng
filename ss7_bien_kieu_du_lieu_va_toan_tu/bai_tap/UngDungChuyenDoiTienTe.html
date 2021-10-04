@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <title>Chuyển đổi tiền tệ</title>
     <style>
+        select { width: 110px}
 
 
     </style>
 </head>
 <body>
 <form>
-<div>
-    <label>Amonunt</label>
-    <label>Form Currency</label>
-    <label>To Currency</label><br></div>
+    <div><strong>
+        <label style="margin-left: 70px">Amonunt</label>
+        <label style="margin-left: 110px">Form Currency</label>
+        <label style="margin-left: 90px">To Currency</label><br></div>
+</strong>
     <input type="text"id="sotien">
-    <select>
-      <option>Việt Nam</option>
+    <select style="margin-left: 74px";>
+        <option>Việt Nam</option>
     </select>
-    <select>
+    <select style="margin-left: 85px">
         <option>USD</option>
     </select>
-    <button type="button" onclick="tinhtoan()">Convert</button></label><br>
+    <button style="margin-left: 45px" type="button" onclick="tinhtoan()">Convert</button></label><br>
     <br>
     <label style="color: blue">Result:</label>
     <label id="ketqua" style="color: blue"  >
-</label>
+    </label>
 </form>
 </body>
 <script>
