@@ -37,15 +37,12 @@
         let b = document.getElementById("from").value;
         let c = document.getElementById("to").value;
         if (b==c) {
-        document.getElementById("ketqua").innerText = +a };
-        if (b == "vnd" && c == "usd") {
-          let d = a/24000;
-            document.getElementById("ketqua").innerHTML = +d + " "+ "VND";
+        document.getElementById("ketqua").innerText = +a }
+        else if (b == "vnd" && c == "usd") {
+            document.getElementById("ketqua").innerText = +a/2300 + " "+ "VND";
         }
         else if (b=='usd' && c== 'vnd') {
-             let  e = a*24000;
-        document.getElementById("ketqua").innerText = +e;
-
+        document.getElementById("ketqua").innerText = +a*23000 + " "+"VND";
         }
     }
 
