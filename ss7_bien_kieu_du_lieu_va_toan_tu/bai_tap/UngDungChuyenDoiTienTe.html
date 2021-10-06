@@ -15,11 +15,13 @@
         <label style="margin-left: 90px">To Currency</label><br>
 </strong>
     <input type="text"id="sotien">
-    <select style="margin-left: 74px";>
-        <option>Việt Nam</option>
+    <select style="margin-left: 74px"; id="from">
+        <option value="vnd">Việt Nam</option>
+        <option value="usd">USD</option>
     </select>
-    <select style="margin-left: 85px">
-        <option>USD</option>
+    <select style="margin-left: 85px" id="to">
+        <option value="usd">USD</option>
+        <option value="vnd">Việt Nam</option>
     </select>
     <button style="margin-left: 45px" type="button" onclick="tinhtoan()">Convert</button><br>
     <br>
@@ -32,9 +34,21 @@
     function tinhtoan() {
         let a = document.getElementById("sotien").value;
         a = parseInt(a);
-        let b = a*0.000043878894251864855;
-        document.getElementById("ketqua").innerText =b + " " + "VND"  ;
+        let b = document.getElementById("from").value;
+        let c = document.getElementById("to").value;
+        if (b==c) {
+        document.getElementById("ketqua").innerText = +a };
+        if (b == "vnd" && c == "usd") {
+          let d = a/24000;
+            document.getElementById("ketqua").innerHTML = +d + " "+ "VND";
+        }
+        else if (b=='usd' && c== 'vnd') {
+             let  e = a*24000;
+        document.getElementById("ketqua").innerText = +e;
+
+        }
     }
+
 </script>
 
 </html>
