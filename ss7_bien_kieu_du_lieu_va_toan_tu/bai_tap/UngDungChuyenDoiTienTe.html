@@ -32,17 +32,16 @@
 </body>
 <script>
     function tinhToan() {
-        let a = document.getElementById("sotien").value;
-        a = parseInt(a);
-        let b = document.getElementById("from").value;
-        let c = document.getElementById("to").value;
-        if (b==c) {
+        let soTien = parseInt( document.getElementById("sotien").value);
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        if (from==to) {
         document.getElementById("ketqua").innerText = +a }
-        else if (b == "vnd" && c == "usd") {
-            document.getElementById("ketqua").innerText = +a/2300 + " "+ "VND";
+        else if (from == "vnd" && to == "usd") {
+            document.getElementById("ketqua").innerText = +soTien/2300 + " "+ "VND";
         }
-        else if (b=='usd' && c== 'vnd') {
-        document.getElementById("ketqua").innerText = +a*23000;
+        else if (from=='usd' && to== 'vnd') {
+        document.getElementById("ketqua").innerText = +soTien*23000;
         }
     }
 
