@@ -5,6 +5,35 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    /* TT	 Số kWh sử dụng	     Giá bán điện (đồng/kWh)
+     Bậc 1	Cho kWh từ 0 - 50	       1.678
+     Bậc 2	Cho kWh từ 51 - 100  	   1.734
+     Bậc 3	Cho kWh từ 101 - 200	   2.014
+     Bậc 4	Cho kWh từ 201 - 300	   2.536
+     Bậc 5	Cho kWh từ 301 - 400	   2.834
+     Bậc 6	Cho kWh từ 401 trở lên	   2.927 */
+    let soDien=prompt("Nhập số điện đã sử dụng (kWh):");
+    let bac1=1678 ; let bac2=1734; let bac3=2014 ;
+    let bac4=2536 ; let bac5=2834; let bac6=2927 ;
+    let tienDien=0;
+    if (soDien<0) {
+        alert("Vui lòng nhập lại số điện\n Số điện phải lớn hơn 0" )}
+    else if (soDien<=50){
+        tienDien=soDien*bac1}
+    else if (soDien<=100){
+        tienDien=(soDien-50)*bac2+50*bac1}
+    else if (soDien<=200){
+        tienDien=(soDien-100)*bac3+bac2*50+bac1*50}
+    else if (soDien<=300){
+        tienDien=(soDien-200)*bac4+bac3*100+bac2*50+bac1*50}
+    else if (soDien<=400){
+        tienDien=(soDien-300)*bac5+bac4*100+bac3*100+bac2*50+bac1*50}
+    else {
+        tienDien=(soDien-400)*bac6+bac5*100+bac4*100+bac3*100+bac2*50+bac1*50}
+    alert("Bạn đã sử dụng: "+soDien+" kWh điện"+
+        "\n Số tiền bạn phải trả là: "+tienDien+" đồng")
+</script>
 
 </body>
 </html>

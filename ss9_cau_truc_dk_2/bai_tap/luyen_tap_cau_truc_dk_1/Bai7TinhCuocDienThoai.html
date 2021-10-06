@@ -6,23 +6,19 @@
 </head>
 <body>
 <script>
-    let soPhut=parseInt(prompt("Số phút đã gọi:"));
+    let soPhut=prompt("Số phút đã gọi:");
+    let phi=0
     /* 600 đồng cho mỗi phút gọi của 50 phút đầu tiên
-       400 đồng cho mỗi phút gọi của 150 phút tiếp theo
-       200 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên */
+    //    400 đồng cho mỗi phút gọi của 150 phút tiếp theo
+    //    200 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên */
     if(soPhut<50) {
-        let phi=soPhut*600
-        alert("Bạn đã gọi"+" "+soPhut+" "+ "phút"+
-        "\n Số tiền bạn phải trả là:"+" "+phi+" "+"đồng")}
+        phi=soPhut*600}
     else if(soPhut<200) {
-        let phi2=(soPhut-50)*400+50*600
-        alert("Bạn đã gọi"+" "+soPhut+" "+ "phút"+
-            "\n Số tiền bạn phải trả là: "+" "+phi2+" "+"đồng")}
+        phi=(soPhut-50)*400+50*600}
     else {
-        let phi3=(soPhut-200)*200+150*400+50*600
-        alert("Bạn đã gọi"+" "+soPhut+" "+ "phút"+
-            "\n Số tiền bạn phải trả là:"+" "+phi3+" "+"đồng")}
+        phi=(soPhut-200)*200+150*400+50*600}
+    alert("Bạn đã gọi"+" "+soPhut+" phút"+
+        "\n Số tiền bạn phải trả là: "+phi+" đồng")
 </script>
-
 </body>
 </html>

@@ -6,23 +6,24 @@
 </head>
 <body>
 <script>
-    let doanhSo=parseInt(prompt("Nhập tổng doanh số bán hàng (đơn vị là triệu đồng):"));
+    let doanhSo=prompt("Nhập tổng doanh số bán hàng (đơn vị là triệu đồng):")
+    ;
     if (doanhSo<=100){
         let hoahong=doanhSo*5/100
-        alert("Với tổng doanh số là:"+" "+doanhSo+" "+"triệu đồng"+
-         "\nThì hoa hồng nhận được là:"+" "+hoahong+" "+"triệu đồng")}
+        alert("Với tổng doanh số là: "+doanhSo+" triệu đồng"+
+         "\nThì hoa hồng nhận được là: "+hoahong+" triệu đồng")}
     else  if (doanhSo<=200){
         let hoahong1=doanhSo*10/100
-        alert("Với tổng doanh số là:"+" "+doanhSo+" "+"triệu đồng"+
+        alert("Với tổng doanh số là: "+doanhSo+" triệu đồng"+
             "\nThì hoa hồng nhận được là:"+" "+hoahong1+" "+"triệu đồng")}
     else if (doanhSo<=300){
         let hoahong2=doanhSo*15/100
-        alert("Với tổng doanh số là:"+" "+doanhSo+" "+"triệu đồng"+
-            "\nThì hoa hồng nhận được là:"+" "+hoahong2+" "+"triệu đồng")}
+        alert("Với tổng doanh số là: "+doanhSo+" triệu đồng"+
+            "\nThì hoa hồng nhận được là:"+" "+hoahong2+" triệu đồng")}
     else if (doanhSo>300){
         let hoahong3=doanhSo*20/100
-        alert("Với tổng doanh số là:"+" "+doanhSo+" "+"triệu đồng"+
-            "\nThì hoa hồng nhận được là:"+" "+hoahong3+" "+"triệu đồng")}
+        alert("Với tổng doanh số là: "+doanhSo+" triệu đồng"+
+            "\nThì hoa hồng nhận được là: "+hoahong3+" triệu đồng")}
 </script>
 
 
