@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemKiemTra=parseInt(prompt("Nhập điểm kiểm tra (thang điểm từ 0 đến 10):"));
+    let diemThiGiuaKy=parseInt(prompt("Nhập điểm thi giữa kỳ (thang điểm từ 0 đến 10):"));
+    let diemThiCuoiKy=parseInt(prompt("Nhập điểm thi cuối kỳ (thang điểm từ 0 đến 10):"));
+    let diemTrungbinh =(diemKiemTra+diemThiGiuaKy+diemThiCuoiKy)/3;
+    if(diemTrungbinh>=8){
+        alert("Loại A")}
+    else if(diemTrungbinh>=6.5){
+        alert("Loại B")}
+    else if(diemTrungbinh>=5){
+        alert("Loại C")}
+    else {
+        alert("Loại D")}
+</script>
+
+</body>
+</html>
