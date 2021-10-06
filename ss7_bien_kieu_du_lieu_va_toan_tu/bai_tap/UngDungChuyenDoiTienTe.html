@@ -23,7 +23,7 @@
         <option value="usd">USD</option>
         <option value="vnd">Việt Nam</option>
     </select>
-    <button style="margin-left: 45px" type="button" onclick="tinhtoan()">Convert</button><br>
+    <button style="margin-left: 45px" type="button" onclick="tinhToan()">Convert</button><br>
     <br>
     <label style="color: blue">Result:</label>
     <label id="ketqua" style="color: blue"  >
@@ -31,7 +31,7 @@
 </form>
 </body>
 <script>
-    function tinhtoan() {
+    function tinhToan() {
         let a = document.getElementById("sotien").value;
         a = parseInt(a);
         let b = document.getElementById("from").value;
@@ -42,7 +42,7 @@
             document.getElementById("ketqua").innerText = +a/2300 + " "+ "VND";
         }
         else if (b=='usd' && c== 'vnd') {
-        document.getElementById("ketqua").innerText = +a*23000 + " "+"VND";
+        document.getElementById("ketqua").innerText = +a*23000;
         }
     }
 
