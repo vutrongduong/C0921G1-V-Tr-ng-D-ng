@@ -7,17 +7,18 @@
   table {
    margin: auto;
   text-align: center;
-   border: 5px solid;
-  }
+   border: 5px solid;}
   #ketqua {text-align: right}
   input {color: blue ;
   width: 51px;
   height: 40px;
-   font-size: 21px;
-  }
+   font-size: 21px;}
   td { width: 100px;
-  height: 50px
-  }
+  height: 50px}
+  button {color: blue ;
+   width: 51px;
+   height: 40px;
+   font-size: 21px;}
  </style>
 </head>
 <body>
@@ -26,32 +27,38 @@
   <td colspan="4"><input id="ketqua" type="text" style="width: 300px"></td>
  </tr>
  <tr>
-  <td><input type="button" value="1" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="2" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="3" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="+" onclick="ketqua.value += this.value"></td>
+  <td><input type="button" value="1" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="2" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="3" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="+" onclick="nhap(this.value)"></td>
  </tr>
  <tr>
-  <td><input type="button" value="4" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="5" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="6" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="-" onclick="ketqua.value += this.value"></td>
+  <td><input type="button" value="4" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="5" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="6" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="-" onclick="nhap(this.value)"></td>
  </tr>
  <tr>
-  <td><input type="button" value="7" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="8" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="9" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="*" onclick="ketqua.value += this.value"></td>
+  <td><input type="button" value="7" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="8" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="9" onclick="nhap(this.value)"></td>
+  <td><button value="*" onclick="nhap(this.value)">x</button></td>
   </tr>
  <tr>
-  <td><input type="button" value="0" onclick="ketqua.value += this.value"></td>
-  <td><input type="button" value="C" onclick="ketqua.value = '' "></td>
-  <td><input type="button" value="=" onclick="ketqua.value = eval(ketqua.value)"></td>
-  <td><input type="button" value="/" onclick="ketqua.value += this.value"></td>
+  <td><input type="button" value="C" onclick="xoa()"></td>
+  <td><input type="button" value="0" onclick="nhap(this.value)"></td>
+  <td><input type="button" value="=" onclick="tinh()"></td>
+  <td><input type="button" value="/" onclick="nhap(this.value)"></td>
  </tr>
 </table>
-</body>
-</html>
-
+<script>
+ function nhap(so) {
+   document.getElementById("ketqua").value+=so;}
+ function tinh() {
+  let bieuThuc=document.getElementById("ketqua").value;
+  document.getElementById("ketqua").value=eval(bieuThuc)}
+ function xoa() {
+  document.getElementById("ketqua").value="";}
+</script>
 </body>
 </html>
