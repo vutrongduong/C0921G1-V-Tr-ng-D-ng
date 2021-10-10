@@ -6,9 +6,16 @@
 </head>
 <body>
 <script>
-    for (i=0;i<30;i++){
-
+    let tong=0;i=0;dem=1
+    while (dem<=30){
+        if (i%7==0){
+            tong+=i
+            dem++
+        }
+        i++
     }
+    alert("Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên là: "+tong)
+
 </script>
 
 </body>
