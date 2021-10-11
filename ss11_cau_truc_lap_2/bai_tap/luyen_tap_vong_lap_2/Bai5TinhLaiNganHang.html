@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienVon=parseInt(prompt("Nhập số tiền ban đầu (triệu đồng): "));
+    let soThang=parseInt(prompt("Nhập số tháng cho vay (tháng): "));
+    let laiXuat=parseInt(prompt("Lãi xuất hàng tháng (%) : "));
+    let  tienLai=tienVon
+    for (i=1;i<=soThang;i++) {
+        tienLai=tienLai+((tienLai*laiXuat)/100)}
+    alert
+    ("Số vốn ban đầu: "+tienVon+" triệu đồng\n"+
+        "Với lãi xuất: "+laiXuat+" %/tháng \n" +
+        "Sau"+" "+soThang+" tháng tổng số tiền bạn nhận được là:\n" +
+        "=>> "+tienLai+" triệu đồng")
+</script>
+</body>
+</html>
