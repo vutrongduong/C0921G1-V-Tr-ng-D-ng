@@ -6,12 +6,17 @@
 </head>
 <body>
 <script>
-    let a=0,b=1,c=0;
-     do {a=b;
-         b=c;
-         c=a+b;
-     }while (c%5!==0)
-    alert("Số đầu tiên trong dãy fibonacci chia hết cho 5 là: "+c)
+    let a=0;
+    let b=1;
+    for (let i=0;i<=10;i++){
+        if (a%5==0){
+            alert("Số đầu tiên trong dãy fibonacci chia hết cho 5 là: "+a);
+            break
+        }
+        let c=a+b;
+        a=b;
+        b=c;
+    }
 </script>
 </body>
 </html>
