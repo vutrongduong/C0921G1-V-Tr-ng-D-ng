@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen=[-1,5,3,-4,-6,7,-10,9,15,-17];
+    let dem=0
+    let soAm=''
+    for (let i=0;i<soNguyen.length;i++){
+        if (soNguyen[i]<0){
+            soAm+=soNguyen[i]+','
+           dem++
+        }
+    }
+    alert("Có "+dem+" số nguyên âm trong chuỗi lần lượt là: "+soAm)
+</script>
+
+</body>
+</html>

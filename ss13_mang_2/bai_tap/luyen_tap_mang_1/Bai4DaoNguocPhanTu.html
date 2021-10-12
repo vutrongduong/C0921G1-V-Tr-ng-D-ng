@@ -6,10 +6,12 @@
 </head>
 <body>
 <script>
-   let so=prompt("Nhập vào một mảng số nguyên: ")
-   let mang=[so.toString()]
-
-
+    let doDai=prompt("Nhập dộ dài của mảng");
+    let mang=[];
+    for (i=0;i<doDai;i++){
+        mang[i]=prompt("Nhập phần từ tại vị trí: "+i);
+    }
+    alert(mang.reverse())
 </script>
 
 </body>

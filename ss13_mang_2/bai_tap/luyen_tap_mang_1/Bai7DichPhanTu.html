@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang=[];
+    let soNguyen=prompt("Nhập số nguyên V:")
+    for (i=0;i<10;i++){
+        let flag=true
+        mang[i]=prompt("Nhập phần tử tại vị trí: "+i);
+        if (mang[i]==soNguyen){
+            flag=true;
+        }
+        else {
+            flag=false;
+        }
+    }
+    if(flag=true){mang.splice(i,1)
+
+    }
+    alert(mang)
+</script>
+
+</body>
+</html>
