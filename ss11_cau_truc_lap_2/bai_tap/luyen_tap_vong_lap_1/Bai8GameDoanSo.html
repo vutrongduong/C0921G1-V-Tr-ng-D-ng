@@ -8,18 +8,22 @@
 <input type="button" value="Chơi" onclick="choi()">
 <script>
     function choi() {
-        let khoang = parseInt(prompt("Bạn muốn đoán trong bao nhiêu số :"));
-        let soDeDoan =parseInt(Math.random() * khoang);
-        let soNhap=0
+        let min=parseInt(prompt("Nhập khoảng dưới: "));
+        let max=parseInt(prompt("Nhập khoảng trên: "));
+        let soDeDoan =Math.floor(Math.random()*(max-min)+min);
+        let soNhap=0;
         for (i=1;i<=3;i++){
-            soNhap = parseInt(prompt("Nhập một số bất kỳ trong khoảng khoảng vừa chọn: "));
+            soNhap = parseInt(prompt("Nhập số bạn cần dự đoán lần thứ: "+i));
             if (soNhap === soDeDoan) {
                 alert("Chúc mừng bạn đã chọn đúng");
                 break
             } else if (soNhap < soDeDoan) {
-                alert("Số vừa nhập nhỏ hơn , thử lại số khác")
+                alert("Số vừa nhập nhỏ hơn , thử lại số khác");
             } else {
-                alert("Số vừa nhập lớn hơn , thử lại số khác")
+                alert("Số vừa nhập lớn hơn , thử lại số khác");
+            }
+            if (i===3){
+                alert("Bạn đã nhập hết 3 lần");
             }
         }
     }
