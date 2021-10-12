@@ -8,11 +8,15 @@
 <script>
     let mang=[];
     let soNguyenV=prompt("Nhập số nguyên V:")
-    for (i=0;i<10;i++){
-        mang[i]=prompt("Nhập phần tử thứ "+(i+1));
-        if (mang[i]==soNguyenV){
-
-
+    for (let i=0;i<5;i++) {
+        mang[i] = prompt("Nhập phần tử thứ " + (i + 1));
+        if (mang[i] == soNguyenV) {
+            mang.splice(i,1,mang[i+1]);
+            //hàm splice dùng để dịch chuyển phần tử bên phải V vào trị trí của V
+           mang[mang.length-1]=0;//gán phần tử cuối mảng = 0
+        }
+    }
+    alert(mang)
 </script>
 
 </body>

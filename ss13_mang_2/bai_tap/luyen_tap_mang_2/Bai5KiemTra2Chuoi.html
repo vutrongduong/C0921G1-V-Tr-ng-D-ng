@@ -8,20 +8,7 @@
 <script>
     let chuoi1=(prompt("Nhập chuỗi 1: "));
     let chuoi2=(prompt("Nhập chuỗi 2: "));
-    let flag=true
-    if (chuoi1.length===chuoi2.length){
-        for(let i=0;i<chuoi1.length;i++){
-            if (chuoi1[i]!==chuoi2[i]){
-                flag=false;
-                break;
-            }
-            else {
-                flag=true;
-            }
-        }
-    }
-    else {
-        flag=false}
+    let flag=chuoi1.includes(chuoi2);
     if(flag===true){
         alert("Hai chuỗi vừa nhập giống nhau");
     }
