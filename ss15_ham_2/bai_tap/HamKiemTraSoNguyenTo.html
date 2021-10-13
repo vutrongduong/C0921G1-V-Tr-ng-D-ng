@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="">
+    let so=prompt("Nhập số cần kiểm tra")
+    function ktSNT(so) {
+        if (so >= 2) {
+            for (let i = 2; i < so; i++) {
+                if (so % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+    if(ktSNT(so)){
+        alert("Số vừa nhập là số nguyên tố");
+    }
+    else {
+        alert("Số vừa nhập không phải là số nguyên tố")
+    }
+    let i=0;
+    let result=""
+    while (i<10000){
+        if (ktSNT(i)){
+            result+=i+","
+        }
+        i++
+    }
+    document.writeln("Số nguyên tố nhỏ hơn 10000: "+result)
+</script>
+
+</body>
+</html>

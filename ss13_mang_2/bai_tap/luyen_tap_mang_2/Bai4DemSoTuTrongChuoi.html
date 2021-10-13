@@ -6,14 +6,16 @@
 </head>
 <body>
 <script>
-    let chuoi=prompt("Nhập một chuỗi");
-    let soKhoangTrang=0
-  for (i=0;i<chuoi.length;i++){
-      if (chuoi[i]===" "){
-          soKhoangTrang++;
+    let chuoi= prompt("Nhập một chuỗi");
+    let soTu=0;
+    let flag=true;
+  for (let i=0;i<chuoi.length;i++){
+      if (chuoi[i]===(chuoi[i]+" ")){
+
+         soTu++;
       }
   }
-   let soTu=soKhoangTrang+1
+   // let soTu=soKhoangTrang+1
   alert("Số từ trong chuỗi vừa nhập là: "+soTu)
 </script>
 </body>
