@@ -11,10 +11,20 @@
 </form>
 <script>
     function dich() {
-
-
+        let mangA = ["hello","bye","go","run","good night"];
+        let mangB = ["xin chào", "tạm biệt","đi","chạy","ngủ ngon"];
+        mangA.length === mangB.length;
+        let tuCanDich = document.getElementById("tuCanDich").value;
+        for (let i = 0; i < mangA.length; i++) {
+            if (tuCanDich === mangA[i]) {
+                document.getElementById("tuCanDich").value = mangB[i];
+            }
+        }
+        let check=mangA.includes(tuCanDich);
+        if(check===false){
+            alert("Không tìm thấy từ vừa nhập")
+        }
     }
-
 </script>
 
 </body>

@@ -8,14 +8,13 @@
 <script>
     let mangA=[];
     let mangB=[];
-    let mangC=[];
     for (let i =0;i<10;i++){
         mangA[i]=prompt("Nhập phần thứ "+(i+1)+" của mảng A");
     }
     for (let j =0;j<10;j++){
         mangB[j]=prompt("Nhập phần thứ "+(j+1)+" của mảng B");
     }
-     mangC=mangA.concat(mangB)
+     let mangC=mangA.concat(mangB)
     alert(mangC)
 </script>
 
