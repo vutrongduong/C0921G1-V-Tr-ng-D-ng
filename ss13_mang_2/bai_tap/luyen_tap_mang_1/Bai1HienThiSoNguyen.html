@@ -8,12 +8,14 @@
 <script>
     let soNguyen=[10,20,3,5,6,8,9,11,15,5];
     let result='';
+    let count=0;
     for (let i=0;i<soNguyen.length;i++){
         if(soNguyen[i]>=10){
          result +=soNguyen[i]+",";
+         count++
         }
     }
-    alert("Trong mảng: "+soNguyen+" số lớn hơn hoặc bằng 10 là: "+result);
+    alert("Trong mảng: "+soNguyen+" có "+count+ " số lớn hơn hoặc bằng 10 là: "+result );
 </script>
 </body>
 </html>
