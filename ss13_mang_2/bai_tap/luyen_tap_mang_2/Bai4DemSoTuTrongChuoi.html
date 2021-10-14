@@ -7,14 +7,15 @@
 </head>
 <body>
 <script>
-    let chuoi= prompt("Nhập một chuỗi");
-    let soTu=1;
+    let chuoi=prompt("Nhập một chuỗi: ");
+    chuoi=chuoi.split(" ");
+    let soTu=0;
     for (let i=0;i<chuoi.length;i++){
-        if (chuoi[i+1]===" "&&chuoi[i+2]!==" "){
-            soTu++;
+        if (chuoi[i]!==""){
+            soTu++
         }
     }
-    alert("Số từ trong chuỗi vừa nhập là: "+soTu)
+    alert("Số từ trong chuỗi vừa nhập là: "+soTu);
 </script>
 </body>
 </html>
