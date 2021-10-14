@@ -8,12 +8,12 @@
 <script>
     function tinh(so) {
         let j=so;
-        for (i=1;i<so;i++){
+        for (let i=1;i<so;i++){
             j=j*i;
         }
         alert("Giai thừa của "+so+" là "+j);
     }
-    let nhap=prompt("Nhập một số nguyên bất kỳ");
+    let nhap=parseInt(prompt("Nhập một số nguyên bất kỳ"));
     tinh(nhap);
 </script>
 

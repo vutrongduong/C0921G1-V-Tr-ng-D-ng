@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daoNguocMang(arr) {
+        alert("Mảng sau khi bị đảo ngược: " +arr.reverse());
+    }
+    let arr=[];
+    let doDai=prompt("Nhập độ dài mảng");
+    for (i=0;i<doDai;i++){
+        arr[i]=parseInt(prompt("Nhập phần tử thứ : "+(i+1)));
+    }
+    daoNguocMang(arr);
+</script>
+</body>
+</html>

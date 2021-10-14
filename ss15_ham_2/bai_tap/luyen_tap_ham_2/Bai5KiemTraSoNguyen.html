@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinh(a,b,c) {
+        let min=0;
+        for (let i=0;i<3;i++){
+            if (a<b&&a<c){
+                min=a;
+            }else if (b<c){
+                min=b;
+            }else {
+                min=c;
+            }
+        }
+        alert("Số nguyên có giá trị nhỏ nhất là: " +min)
+    }
+    let a=parseInt(prompt("Nhập số nguyên thứ nhất"));
+    let b=parseInt(prompt("Nhập sô nguyên thứ hai"));
+    let c=parseInt(prompt("Nhập số nguyên thứ ba"));
+    tinh(a,b,c)
+</script>
+
+</body>
+</html>
