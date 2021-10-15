@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s){
+        let a=s.length-1
+        for (let i=0;i<s.length/2;i++){
+            if (s[i]!==s[a-i]){
+                return false
+            }
+        }
+        return true
+    }
+    let chuoi=prompt("Nhập từ cần kiểm tra");
+    alert(isPalindrome(chuoi))
+</script>
+</body>
+</html>
