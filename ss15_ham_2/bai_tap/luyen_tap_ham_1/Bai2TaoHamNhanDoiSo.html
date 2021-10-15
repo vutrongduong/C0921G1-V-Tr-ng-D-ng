@@ -5,15 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<p>Nhập vào một số</p>
-<input type="number" id="soNhap">
-<input type="button" value="Xong" onclick="tinh()">
 </body>
 <script>
- function tinh() {
-     let i=parseInt(document.getElementById("soNhap").value);
-     i++;
-     alert(i);
- }
+    function tinh(so) {
+        so++;
+        alert("kết quả là: "+so);
+    }
+    let nhapSO=prompt("Nhập một đối số: ");
+    tinh(nhapSO);
 </script>
 </html>

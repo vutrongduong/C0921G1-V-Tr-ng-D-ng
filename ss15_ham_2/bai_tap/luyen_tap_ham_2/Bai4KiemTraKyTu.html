@@ -7,16 +7,17 @@
 <body>
 <script>
     function check(chuoi) {
-        if (typeof ){
-            alert("true")
+        let flag=true;
+        let so=isNaN(chuoi);
+        if (!so){
+            alert(flag);
         }
         else {
-            alert("false")
+            alert(!flag);
         }
     }
-    let nhap=prompt()
-    check(nhap)
-
+    let nhap=prompt("Nhập ký tự cần ki");
+    check(nhap);
 </script>
 
 </body>
