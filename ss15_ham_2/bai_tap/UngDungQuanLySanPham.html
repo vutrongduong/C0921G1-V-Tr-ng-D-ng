@@ -3,36 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        input{
+            color: white;
+            background-color: forestgreen;
+        }
+        td,th{
+            padding: 8px;
+        }
+        table{
+            width: 40%;
+        }
+        span{
+            color: #d61b06;
+        }
+    </style>
 </head>
 <body>
 <form>
-   <h2>Add New Product</h2>;
-    <input type="text" value="New Product" id="sanpham">;
-    <input type="button" value="Add" onclick="add">;
+   <h2>Add New Product</h2>
+    <input type="text" placeholder="New Product" style="background-color: white; color: black"  id="sanphammoi">
+    <input type="button" value="Add" onclick="add()">
 </form>
 <h2>Display All Product</h2>
-<table>
-    <tr>
-        <td>Product Nam</td>
-    </tr>
-
-</table>
+<span><strong>Product Name</strong></span><span id="soLuong" style="margin-left: 27%" ></span>
+<p id="display"></p>
 <script>
-    let danhSachSP=["Sony Xperia","Samsung Galaxy","Nokia 6","Xiaomi Redmi Note 4","Apple iPhone 6S",
+    let arr=["Sony Xperia","Samsung Galaxy","Nokia 6","Xiaomi Redmi Note 4","Apple iPhone 6S",
     "Xiaomi Mi 5s Plus","Apple iPhone 8 Plus","Fujitsu F-04E","Oppo A71"];
-    function hienThi() {
-        let table="<table border='1'>";
-        for ()
-
-
+    function disPlay() {
+        let table="<table border='1' style='border-collapse: collapse'>";
+        for (let i=0;i<arr.length;i++){
+            document.getElementById("soLuong").innerHTML=(i+1)+"products"
+            table+="<tr>";
+            table+="<td>"+arr[i]+"</td>";
+            table+="<td>"+"<input type='button' value='Edit' onclick='edit("+i+")'>"+"</td>";
+            table+="<td>"+"<input type='button' value='Delete' onclick='xoa("+i+")'>"+"</td>";
+            table+="</tr>"
+        }
+        table+="</table>";
+        document.getElementById("display").innerHTML=table;
     }
-</script>
-
-
-
-
-
-
-
+    disPlay()
+    function add() {
+        let tenMoi=document.getElementById("sanphammoi").value;
+        arr.push(tenMoi);
+        alert("Bạn đã thêm một sản phẩm mới có tên là: "+tenMoi);
+        disPlay();
+    }
+    function edit(i) {
+        let newName=prompt("Bạn muốn sử tên "+arr[i]+" thành :");
+        if(newName!==""&&newName!==null)
+        arr[i]=newName;
+        disPlay();
+    }
+    function xoa(i) {
+        let flag=confirm("Bạn có muốn xóa sản phẩm có tên: "+arr[i]);
+        if (flag){
+            arr.splice(i,1);
+        }
+        disPlay();
+    }
+ </script>
 </body>
 </html>
