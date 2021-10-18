@@ -8,20 +8,24 @@
 <script>
     let tenNgoiSao=["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
     let tenChomSao=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
-    function check(chuoi){
-        for (let i=0;i<tenNgoiSao.length;i++){
-            if(chuoi===tenNgoiSao[i]){
-              return chuoi=tenChomSao[i];
+    function check(nhap) {
+        let flag=true;
+        for (let i = 0; i < tenNgoiSao.length; i++) {
+            if (nhap === tenNgoiSao[i]) {
+                alert(tenChomSao[i]);
+                return flag;
             }
+            else {
+                flag=false;
+            }
+        }
+        if(!flag){
+           alert( "Không tìm thấy tên ngôi sao vừa nhập")
         }
     }
     let nhap=prompt("Nhập tên ngôi sao");
-    tenChomSao=check(nhap);
-    if (tenChomSao){
-    alert("Tên Chòm sao của ngôi sao "+nhap+" là: "+tenChomSao);}
-    else {
-        alert("Không tìm thấy ngôi sao bạn vừa nhập");
-    }
+    let flag=check(nhap);
+
 </script>
 
 </body>

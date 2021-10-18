@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Aplle{
+        constructor(weight) {
+            this.weight=weight;
+        }
+
+        decrease(){
+        if(this.weight>0){
+            this.weight-1;}
+        }
+        getWeight(){
+            return this.weight;
+        }
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name=name;
+            this.gender=gender;
+            this.weight=weight;
+        }
+        setGender(gender){
+            return this.gender=gender;
+        }
+
+        say(){
+            console.log("Say hello")
+        }
+
+        eat(){
+            // Apple.decrease();
+            return this.weight+=1
+        }
+        checkAplle(){
+
+
+        }
+        getName(){
+            return this.name
+        }
+        setName(name){
+            this.name=name
+        }
+        getWeight(){
+            return this.weight
+        }
+        setWeight(weight){
+            this.weight=weight
+        }
+    }
+
+    let adam = new Human("Adam","Male",80);
+    let eva = new Human("Eva","Female",60);
+    let aplle= new Aplle(10)
+    function star() {
+        document.writeln("Name: "+adam.name+"<br>"+"Gender: "+adam.gender+"<br>"+"Weight: "+adam.weight+" kg"+"<br>");
+        adam.say();
+        document.writeln("Weight "+adam.eat(aplle)+"<br>"+"Aplle "+aplle.decrease())
+
+    }
+    star()
+
+
+</script>
+</body>
+</html>
