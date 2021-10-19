@@ -6,67 +6,77 @@
 </head>
 <body>
 <script>
-    class Aplle{
-        constructor(weight) {
-            this.weight=weight;
-        }
-
-        decrease(){
-        if(this.weight>0){
-            this.weight-1;}
+    class Apple{
+        constructor() {
+            this.weight=10;
         }
         getWeight(){
             return this.weight;
         }
+        decrease() {
+            if (this.weight > 0) {
+                return this.weight--;
+            } else {
+                return this.weight = 0;
+            }
+        }
     }
     class Human{
-        constructor(name,gender,weight) {
+        constructor(name,gender,say,weight) {
             this.name=name;
             this.gender=gender;
+            this.say=say;
             this.weight=weight;
         }
         setGender(gender){
             return this.gender=gender;
         }
-
-        say(){
-            console.log("Say hello")
+        setApple(apple){
+            this.apple=apple;
         }
-
+        checkApple(){
+            return this.apple.getWeight();
+        }
         eat(){
-            // Apple.decrease();
-            return this.weight+=1
-        }
-        checkAplle(){
-
-
+            if(this.apple.getWeight()>0){
+                this.weight++;
+                document.writeln("<br>"+this.name+" "+this.say+'<br>');
+                return this.apple.decrease();
+            }
         }
         getName(){
-            return this.name
+            return this.name;
         }
         setName(name){
-            this.name=name
+            this.name= name;
         }
         getWeight(){
-            return this.weight
+            return this.weight;
         }
         setWeight(weight){
-            this.weight=weight
+            this.weight=weight;
         }
-    }
-
-    let adam = new Human("Adam","Male",80);
-    let eva = new Human("Eva","Female",60);
-    let aplle= new Aplle(10)
-    function star() {
-        document.writeln("Name: "+adam.name+"<br>"+"Gender: "+adam.gender+"<br>"+"Weight: "+adam.weight+" kg"+"<br>");
-        adam.say();
-        document.writeln("Weight "+adam.eat(aplle)+"<br>"+"Aplle "+aplle.decrease())
+        getGender(){
+            return this.gender;
+        }
 
     }
-    star()
-
-
+    let adam = new Human("Adam","Male",'say "my turn"',70);
+    let eva = new Human("Eva","Female",'say "give me"',50);
+    let apple = new Apple();
+    document.writeln("Name: "+adam.getName()+"<br>"+"Gender: "+adam.getGender()+"<br>"+"Weight: "+adam.getWeight()+"<br>")
+    document.writeln("Name: "+eva.getName()+"<br>"+"Gender: "+eva.getGender()+"<br>"+"Weight: "+eva.getWeight()+"<br>")
+    document.writeln("Hái được trái táo có khối lượng là "+ apple.getWeight()+"<br>")
+    for (let i=0;i<5;i++){
+        eva.setApple(apple)
+        eva.checkApple();
+        eva.eat();
+        document.writeln("Cân nặng của eva sau khi ăn táo: "+eva.getWeight()+"<br>"+"Khối lượng còn lại của quả táo: "+eva.checkApple());
+        adam.setApple(apple)
+        adam.checkApple();
+        adam.eat();
+        document.writeln("Cân nặng của adam sau khi ăn táo: "+adam.getWeight()+"<br>"+"Khối lượng còn lại của quả táo: "+adam.checkApple())
+    }
 </script>
 </body>
 </html>

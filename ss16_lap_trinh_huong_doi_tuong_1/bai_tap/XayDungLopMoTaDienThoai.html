@@ -6,7 +6,58 @@
 </head>
 <body>
 <script>
+    class DienThoai{
+        constructor() {
+            this.pin=100;
+            this.vungNhoSanThao="";
+            this.vungTinDen=[];
+            this.vungTinGui=[];
+            this.trangThai=true;
+        }
+        kiemTraTrangThai(){
+            if(this.trangThai){
+                console.log("Điện thoại đang bật");
+            }
+            else {
+                console.log("Điện thoại đang tắt");
+            }
+        }
+        sacPin(){
+            this.pin=100;
+        }
+        soanTin(mess){
+            this.vungNhoSanThao=mess;
+        }
+        nhanTin(mess){
+            this.vungTinDen.push(mess);
+        }
+        guiTin(dienThoai,mess){
+            this.soanTin(mess);
+            this.vungTinGui.push(this.vungNhoSanThao);
+            dienThoai.nhanTin(this.vungTinGui);
+            this.vungNhoSanThao="";
+        }
+        xemTinDen(){
+            for (let i=0;i<this.vungTinDen.length;i++){
+            console.log((i+1)+"."+this.vungTinDen[i])
+            }
+        }
+        xemTinGui(){
+            for (let i=0;i<this.vungTinGui.length;i++){
+                console.log((i+1)+"."+this.vungTinGui[i])
+            }
+        }
 
+    }
+    let iphone = new DienThoai()
+    let nokia = new DienThoai()
+    nokia.guiTin(iphone,"hello");
+    iphone.xemTinDen();
+    iphone.guiTin(nokia,"hi,how are you");
+    nokia.xemTinDen();
+    iphone.guiTin(nokia,"alooo")
+    nokia.xemTinDen();
+    iphone.xemTinGui();
 
 </script>
 

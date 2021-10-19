@@ -33,6 +33,13 @@
         getBatteryInfo() {
             return this.battery.getEnergy();
         };
+        turnOn() {
+            this.status = true;
+        };
+
+        turnOff() {
+            this.status = false;
+        }
         light() {
             if(this.status){
                 alert("Lighting");
@@ -40,14 +47,6 @@
                 alert("Not lighting");
             }
         };
-
-       turnOn() {
-            this.status = true;
-        };
-
-        turnOff() {
-            this.status = false;
-        }
     };
     let battery = new Battery();
     battery.setEnergy(10);
