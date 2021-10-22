@@ -6,32 +6,19 @@
 </head>
 <body>
 <script>
-    let mangA=[7,2,5,3,5,3];
-    let mangB=[7,2,5,4,6,3,5,3];
-    let mangC=[]
-    let result={}
-    for (let i=0;i<mangA.length;i++) {
+    let mangA = [7, 2, 5, 3, 5, 3];
+    let mangB = [7, 2, 5, 4, 6, 3, 5, 3];
+    let mangC = []
+    let result = {}
+    for (let i = 0; i < mangA.length; i++) {
         for (let j = 0; j < mangB.length; j++) {
-            // alert(mangB[j]+","+mangA[i])
             if (mangB[j] === mangA[i]) {
-              alert(mangB[j])
+                mangB.splice(j, 1)
                 break
             }
-            // else {
-            //     alert(mangB[j])
-            // }
-
-
         }
     }
-    alert(mangC)
-
-
-
-
-
-
-
+    alert(mangB)
 
 
 </script>
