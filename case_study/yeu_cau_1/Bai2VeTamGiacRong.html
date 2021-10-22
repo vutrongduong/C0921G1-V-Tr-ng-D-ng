@@ -6,18 +6,16 @@
 </head>
 <body>
 <script>
-    let h=prompt("Nhập chiều cao của hình tam giác");
-    for (let i=1;i<=h;i++){
-        for(let j=1;j<=i;j++) {
-            if(i===1||i===h||j===1||j===h){
+    let h=parseInt(prompt("Nhập chiều cao của hình tam giác"));
+    for (let i=1;i<=h;i++) {
+        for (let j = 1; j <= i; j++) {
+            if (j === 1 || j === i || i === h) {
                 document.writeln("*");
-            }
-            else {
+            } else {
                 document.writeln("&nbsp&nbsp")
             }
-
         }
-        document.writeln("<br>")
+        document.writeln("<br>");
     }
 </script>
 

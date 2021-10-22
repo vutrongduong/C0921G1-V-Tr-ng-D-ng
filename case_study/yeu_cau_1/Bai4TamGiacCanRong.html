@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h=parseInt(prompt("Nhập chiều cao của tam giác: "));
+    for (i=1;i<=h;i++){
+        for (let j=i;j<h;j++){
+            document.writeln('&nbsp&nbsp');
+        }
+        for (let j=1;j<=(2*i-1);j++){
+            if(j===1||j===(2*i-1)||i===h){
+                document.writeln("*");
+            }
+            else {
+                document.writeln('&nbsp&nbsp');
+            }
+        }
+        document.writeln("<br>");
+    }
+</script>
+
+</body>
+</html>

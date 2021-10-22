@@ -6,19 +6,38 @@
 </head>
 <body>
 <script>
-    let so=prompt("Nhập một số");
-    let mangSo=(1,2,3,4,5,6,7,8,9);
-    let mangChu=["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười"];
-    for (i=0;i<mangSo.length;i++){
-        if(so[i]===mangSo[i]){
-            document.writeln(mangChu[i])
+    let soNhap=prompt("Nhập một số");
+    let doDAi=soNhap.length;
+    let result=[];
+    let count=0;
+    for(let i=0;i<doDAi;i++){
+        count=soNhap%10
+        switch (count) {
+            case 0:result.unshift("không")
+                break;
+            case 1:result.unshift("một")
+                break;
+            case 2:result.unshift("hai")
+                break;
+            case 3:result.unshift("ba")
+                break;
+            case 4:result.unshift("bốn")
+                break;
+            case 5:result.unshift("năm")
+                break;
+            case 6:result.unshift("sáu")
+                break;
+            case 7:result.unshift("bảy")
+                break;
+            case 8:result.unshift("tám")
+                break;
+            case 9:result.unshift("chín")
+                break;
         }
+        soNhap=soNhap.slice(0,-1);
     }
-
-
+    result=result.join(" ");
+    alert(result);
 </script>
-
-
-
 </body>
 </html>

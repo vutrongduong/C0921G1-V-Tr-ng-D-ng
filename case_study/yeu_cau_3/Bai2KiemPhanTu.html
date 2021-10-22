@@ -9,15 +9,23 @@
     let mangA=[7,2,5,3,5,3];
     let mangB=[7,2,5,4,6,3,5,3];
     let mangC=[]
-    for (let i=0;i<mangB.length;i++){
-        for (let j=0;j<mangA.length;j++){
-            if(mangB[i]!==mangA[i]){
-                mangC[i]=mangB[i];
-
+    let result={}
+    for (let i=0;i<mangA.length;i++) {
+        for (let j = 0; j < mangB.length; j++) {
+            // alert(mangB[j]+","+mangA[i])
+            if (mangB[j] === mangA[i]) {
+              alert(mangB[j])
+                break
             }
+            // else {
+            //     alert(mangB[j])
+            // }
+
+
         }
     }
     alert(mangC)
+
 
 
 
