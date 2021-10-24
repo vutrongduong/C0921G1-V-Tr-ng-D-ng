@@ -6,38 +6,19 @@
 </head>
 <body>
 <script>
-    let soNhap=prompt("Nhập một số");
-    let doDAi=soNhap.length;
+    let so=["0","1","2","3","4","5","6","7","8","9"];
+    let chu=["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín",];
+    let chuoi=prompt("Nhập một số: ");
     let result=[];
-    let count=0;
-    for(let i=0;i<doDAi;i++){
-        count=soNhap%10
-        switch (count) {
-            case 0:result.unshift("không")
-                break;
-            case 1:result.unshift("một")
-                break;
-            case 2:result.unshift("hai")
-                break;
-            case 3:result.unshift("ba")
-                break;
-            case 4:result.unshift("bốn")
-                break;
-            case 5:result.unshift("năm")
-                break;
-            case 6:result.unshift("sáu")
-                break;
-            case 7:result.unshift("bảy")
-                break;
-            case 8:result.unshift("tám")
-                break;
-            case 9:result.unshift("chín")
-                break;
+    chuoi=chuoi.split("")
+    for (i=0;i<chuoi.length;i++){
+        for (j=0;j<so.length;j++){
+            if(chuoi[i]===so[j]){
+                result.push(chu[j])
+            }
         }
-        soNhap=soNhap.slice(0,-1);
     }
-    result=result.join(" ");
-    alert(result);
+    alert(result.join(" "))
 </script>
 </body>
 </html>
