@@ -37,7 +37,7 @@
             document.getElementById("bill").innerHTML = "";
         } else {
             let soLuong = prompt("Nước uống " + loaiThucUong[index] + " có giá: " + giaTien[index] + " nghìn" + "\n Nhập số lượng muốn mua ");
-            if (soLuong !== null && soLuong !=='') {
+            if (soLuong !== null && soLuong !== '') {
                 document.getElementById("bill").innerHTML += "Số tiền bạn cần phải trả cho " + soLuong + " " + loaiThucUong[index] + " là " + soLuong * giaTien[index] + " nghìn" + "<br>";
             }
         }

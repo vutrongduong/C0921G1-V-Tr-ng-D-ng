@@ -7,13 +7,13 @@
 <body>
 <script>
     let s = "cabca";
-    let a=[]
-    for (i=0;i<s.length;i++){
-        if(!a.includes(s[i])){
-            a.push(s[i])
+    let result = [];
+    for (i = 0; i < s.length; i++) {
+        if (!result.includes(s[i])) {
+            result.push(s[i])
         }
     }
-    alert("Có: "+a.length+" ký tự khác nhau là: "+a);
+    alert("Có: " + result.length + " ký tự khác nhau là: " + result);
 </script>
 </body>
 </html>

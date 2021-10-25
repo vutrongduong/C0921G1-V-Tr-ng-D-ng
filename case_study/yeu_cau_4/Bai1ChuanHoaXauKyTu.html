@@ -6,15 +6,16 @@
 </head>
 <body>
 <script>
-let kyTu="tRuong    TaN   HAI ";
-kyTu=kyTu.toLowerCase().split(" ")
-
-    for (let i=0;i<kyTu.length;i++){
-        kyTu[i]=kyTu[i][0].toUpperCase()+kyTu[i].slice(1)
-        alert(kyTu[i])
+    let kyTu = "tRuong    TaN           HAI ";
+    let result = [];
+    kyTu = kyTu.toLowerCase().split(" ");
+    for (let i = 0; i < kyTu.length; i++) {
+        if (kyTu[i] !== "") {
+            kyTu[i] = kyTu[i][0].toUpperCase() + kyTu[i].slice(1);
+            result.push(kyTu[i]);
+        }
     }
-
-
+    alert(result.join(" "));
 </script>
 </body>
 </html>

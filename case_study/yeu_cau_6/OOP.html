@@ -5,7 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Xổ số CodeGym</h1>
+<p id="display"></p>
+<input type="button" value="Mua vé">
+<input type="button" value="Xem kết quả">
+
 <script>
+    function display() {
+        let form = "";
+        for (i = 0; i < 6; i++) {
+            form += "<select>"
+            for (j = 0; j < 100; j++) {
+                form += "<option>" + j + "</option>";
+            }
+            form += "</select>";
+        }
+        document.getElementById("display").innerHTML = form;
+    }
+
+    display();
+
 
 </script>
 </body>

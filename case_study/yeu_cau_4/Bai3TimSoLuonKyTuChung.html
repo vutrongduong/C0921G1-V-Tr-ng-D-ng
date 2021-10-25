@@ -6,20 +6,22 @@
 </head>
 <body>
 <script>
-    let s1="aabcc";s1=s1.split("")
-    let s2 = "adcaa";s2=s2.split("")
-    let count=0;
-    let s3=[];
-    for (i=0;i<s1.length;i++){
-        for (j=0;j<s2.length;j++){
-            if(s1[i]===s2[j]){
+    let s1 = "aabcc";
+    s1 = s1.split("")
+    let s2 = "adcaa";
+    s2 = s2.split("")
+    let count = 0;
+    let result = [];
+    for (i = 0; i < s1.length; i++) {
+        for (j = 0; j < s2.length; j++) {
+            if (s1[i] === s2[j]) {
                 count++;
-                s3.push(s1[i]);
-                s1.splice(i,1);
+                result.push(s1[i]);
+                s1.splice(i, 1);
             }
         }
     }
-    alert("2 xâu s1 và s2 có "+count+" ký tự chung là: "+s3)
+    alert("2 xâu s1 và s2 có " + count + " ký tự chung là: " + result)
 </script>
 </body>
 </html>

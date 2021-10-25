@@ -6,13 +6,13 @@
 </head>
 <body>
 <script>
-    let doDai=prompt("Nhập độ dài của mảng: ");
-    let mangA=[];
-    let mangB=[];
-    let j=0;
-    for (i=0;i<doDai;i++){
-        mangA[i]=parseInt(prompt("Nhập phần từ thứ "+(i+1)));
-        j+=mangA[i];
+    let doDai = prompt("Nhập độ dài của mảng: ");
+    let mangA = [];
+    let mangB = [];
+    let j = 0;
+    for (i = 0; i < doDai; i++) {
+        mangA[i] = parseInt(prompt("Nhập phần từ thứ " + (i + 1)));
+        j += mangA[i];
         mangB.push(j);
     }
     alert(mangB);

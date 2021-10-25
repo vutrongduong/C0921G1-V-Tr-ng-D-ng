@@ -6,24 +6,22 @@
 </head>
 <body>
 <script>
-    let luong=prompt("Nhập lương của nhân viên (triệu) :");
-    let luongThuc=0;
-    let thueThuNhap=0;
-    if (luong>=15){
-        thueThuNhap=20
-        luongThuc=luong-((luong*20)/100);
+    let luong = prompt("Nhập lương của nhân viên (triệu) :");
+    let luongThuc = 0;
+    let thueThuNhap = 0;
+    if (luong >= 15) {
+        thueThuNhap = 20
+        luongThuc = luong - ((luong * 20) / 100);
+    } else if (luong >= 7) {
+        thueThuNhap = 10
+        luongThuc = luong - ((luong * 10) / 100);
+    } else {
+        thueThuNhap = 5
+        luongThuc = luong - ((luong * 5) / 100)
     }
-    else if (luong>=7){
-        thueThuNhap=10
-        luongThuc=luong-((luong*10)/100);
-    }
-    else {
-        thueThuNhap=5
-        luongThuc=luong-((luong*5)/100)
-    }
-    alert("Với mức lương: "+luong
-        +" triệu"+"\n Thuế thu nhập sẽ là: "+thueThuNhap+"%"+"" +
-        "\n Lương ròng của nhân viên: " +luongThuc+" triệu")
+    alert("Với mức lương: " + luong
+        + " triệu" + "\n Thuế thu nhập sẽ là: " + thueThuNhap + "%" + "" +
+        "\n Lương ròng của nhân viên: " + luongThuc + " triệu")
 
 </script>
 
