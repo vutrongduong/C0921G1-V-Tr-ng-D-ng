@@ -7,21 +7,17 @@
 <body>
 <script>
     let kyTu = prompt("Nhập ký tự cần kiểm tra:");
+    kyTu = kyTu.toLowerCase();
     switch (kyTu) {
         case 'o' :
         case 'u' :
         case 'i' :
         case 'a' :
         case 'e' :
-        case 'O' :
-        case 'U' :
-        case 'I' :
-        case 'A' :
-        case 'E' :
-            alert("Ký tự: " + kyTu + " là nguyên âm");
+            alert("Đây là nguyên âm");
             break;
         default : {
-            alert("Ký tự: " + kyTu + " không thuộc nguyên âm")
+            alert("Đây là phụ âm")
         }
     }
 

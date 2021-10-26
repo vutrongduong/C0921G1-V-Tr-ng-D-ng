@@ -6,14 +6,28 @@
 </head>
 <body>
 <script>
-    let s = "cabca";
-    let result = [];
-    for (i = 0; i < s.length; i++) {
-        if (!result.includes(s[i])) {
-            result.push(s[i])
+    // let s = "cabca";
+    // let result = [];
+    // for (i = 0; i < s.length; i++) {
+    //     if (!result.includes(s[i])) {
+    //         result.push(s[i])
+    //     }
+    // }
+    // alert("Có: " + result.length + " ký tự khác nhau là: " + result);
+    function differentSymbolsNaive(str) {
+        let arr=[];
+        for(let i =0;i<str.length;i++){
+            if(arr.indexOf(str.charAt(i))){
+                arr.push(str.charAt(i))
+            }
         }
+        return arr
+
     }
-    alert("Có: " + result.length + " ký tự khác nhau là: " + result);
+    let str=prompt("Nhập");
+    differentSymbolsNaive(str)
+
+
 </script>
 </body>
 </html>

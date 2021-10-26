@@ -6,19 +6,26 @@
 </head>
 <body>
 <script>
-    let so = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    // let so = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    // let chu = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín",];
+    // let chuoi = prompt("Nhập một số: ");
+    // let result = [];
+    // chuoi = chuoi.split("")
+    // for (i = 0; i < chuoi.length; i++) {
+    //     for (j = 0; j < so.length; j++) {
+    //         if (chuoi[i] === so[j]) {
+    //             result.push(chu[j])
+    //         }
+    //     }
+    // }
+    // alert(result.join(" "))
     let chu = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín",];
-    let chuoi = prompt("Nhập một số: ");
-    let result = [];
-    chuoi = chuoi.split("")
-    for (i = 0; i < chuoi.length; i++) {
-        for (j = 0; j < so.length; j++) {
-            if (chuoi[i] === so[j]) {
-                result.push(chu[j])
-            }
-        }
+    let nhap = prompt("Nhập vào số muốn đọc thành chữ ")
+    let result = ""
+    for (i = 0; i < nhap.length; i++) {
+        result += chu[nhap[i]] + " ";
     }
-    alert(result.join(" "))
+    alert("Số vừa nhập là: " + nhap + " in ra thành chữ : " + result);
 </script>
 </body>
 </html>

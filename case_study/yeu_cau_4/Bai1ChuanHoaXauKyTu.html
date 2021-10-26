@@ -6,16 +6,53 @@
 </head>
 <body>
 <script>
-    let kyTu = "tRuong    TaN           HAI ";
-    let result = [];
-    kyTu = kyTu.toLowerCase().split(" ");
-    for (let i = 0; i < kyTu.length; i++) {
-        if (kyTu[i] !== "") {
-            kyTu[i] = kyTu[i][0].toUpperCase() + kyTu[i].slice(1);
-            result.push(kyTu[i]);
+    // let kyTu = "tRuong    TaN           HAI ";
+    // let result = [];
+    // kyTu = kyTu.toLowerCase().split(" ");
+    // for (let i = 0; i < kyTu.length; i++) {
+    //     if (kyTu[i] !== "") {
+    //         kyTu[i] = kyTu[i][0].toUpperCase() + kyTu[i].slice(1);
+    //         result.push(kyTu[i]);
+    //     }
+    // }
+    // alert(result.join(" "));
+    let kyTu = prompt("Nhập xâu ký tự cần chuẩn hóa");
+
+    function chuanHoa(kyTu) {
+        kyTu = kyTu.trim().toLowerCase();
+        let newKyTu = Array.from(kyTu);
+        for (let i = 0; i < newKyTu.length; i++) {
+            if (newKyTu[i] === " " && newKyTu[i + 1] === " ") {
+                for (j = i + 1; j < newKyTu.length; j++) {
+                    newKyTu[j] = newKyTu[j + 1];
+                }
+                --i;
+                newKyTu.pop();
+            }
+
         }
+        newKyTu[0] = newKyTu[0].toUpperCase()
+        for (let i = 0; i < newKyTu.length - 1; i++) {
+            if (newKyTu[i] === " ") {
+                newKyTu[i + 1] = newKyTu[i + 1].toUpperCase()
+            }
+        }
+        return newKyTu.join("");
     }
-    alert(result.join(" "));
+
+    function maxLength(kyTu) {
+        let arrkyTu = kyTu.split(" ");
+        let max = arrkyTu[0];
+        for (let i = 1; i < arrkyTu.length; i++) {
+            if (max.length < arrkyTu[i].length) {
+                max = arrkyTu[i];
+            }
+        }
+        return max;
+    }
+
+    alert("Xấu ký tự nhập vào: " + kyTu + "\nsau khi chuẩn hóa: " + chuanHoa(kyTu) +
+        "\ntừ dài nhất là: " + maxLength(chuanHoa(kyTu)))
 </script>
 </body>
 </html>

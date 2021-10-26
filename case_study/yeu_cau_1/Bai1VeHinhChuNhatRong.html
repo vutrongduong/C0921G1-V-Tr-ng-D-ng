@@ -6,11 +6,11 @@
 </head>
 <body>
 <script>
-    let x = prompt("Nhập chiều dài: ");
-    let y = prompt("Nhập chiều rộng: ");
+    let x = parseInt(prompt("Nhập chiều dài: "));
+    let y = parseInt(prompt("Nhập chiều rộng: "));
     for (let i = 1; i <= x; i++) {
         for (let j = 1; j <= y; j++) {
-            if (i == 1 || i == x || j == 1 || j == y) {
+            if (i === 1 || i === x || j === 1 || j === y) {
                 document.writeln("*");
             } else {
                 document.writeln("&nbsp&nbsp")
