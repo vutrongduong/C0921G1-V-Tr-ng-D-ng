@@ -17,17 +17,15 @@
     function differentSymbolsNaive(str) {
         let arr=[];
         for(let i =0;i<str.length;i++){
-            if(arr.indexOf(str.charAt(i))){
+            if(arr.indexOf(str.charAt(i))===-1){
                 arr.push(str.charAt(i))
             }
         }
-        return arr
-
+        return arr;
     }
-    let str=prompt("Nhập");
-    differentSymbolsNaive(str)
-
-
+    let str=prompt("Nhập vào xâu ký tự");
+    alert("Có "+differentSymbolsNaive(str).length+" kí tự khác nhau"+" \n" +
+        "Gồm có: "+differentSymbolsNaive(str));
 </script>
 </body>
 </html>

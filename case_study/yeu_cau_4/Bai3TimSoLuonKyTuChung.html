@@ -6,22 +6,27 @@
 </head>
 <body>
 <script>
-    let s1 = "aabcc";
-    s1 = s1.split("")
-    let s2 = "adcaa";
-    s2 = s2.split("")
-    let count = 0;
-    let result = [];
-    for (i = 0; i < s1.length; i++) {
-        for (j = 0; j < s2.length; j++) {
-            if (s1[i] === s2[j]) {
-                count++;
-                result.push(s1[i]);
-                s1.splice(i, 1);
+    function commonCharacterCount(s1, s2) {
+        let arr1 = s1.split("");
+        let arr2 = s2.split("");
+        let count = 0;
+        for (i = 0; i < arr1.length; i++) {
+            for (j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                    count++;
+                    arr1.splice(i, 1);
+                    arr2.splice(j, 1);
+                    i--;
+                    break;
+                }
             }
         }
+        return count;
     }
-    alert("2 xâu s1 và s2 có " + count + " ký tự chung là: " + result)
+
+    let s1 = prompt("Nhập xâu ký tự 1");
+    let s2 = prompt("Nhập xâu ký tự 2");
+    alert("2 xâu s1 và s2 có " + commonCharacterCount(s1, s2) + " ký tự chung ");
 </script>
 </body>
 </html>

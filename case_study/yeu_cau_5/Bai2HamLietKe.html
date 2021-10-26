@@ -6,30 +6,34 @@
 </head>
 <body>
 <script>
-    let arr = [
-        [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        [10, 14, 16, 20]
-    ]
-    let result = []
+    let m = parseInt(prompt("Nhập số dòng của ma trận"));
+    let n = parseInt(prompt("Nhập số cột của ma trận"));
+    let arr = [];
+    let result=[]
+    for (let i = 0; i < m; i++) {
+        let row = [];
+        for (let j = 0; j < n; j++) {
+            row[j] = parseInt(prompt("Nhập số vào ma trận"));
+        }
+        arr[i] = row;
+    }
     for (i = 0; i < arr.length; i++) {
         for (j = 0; j < arr[i].length; j++) {
             if (ktSNT(arr[i][j])) {
-                result.push(arr[i][j])
+                result.push(arr[i][j]);
             }
         }
     }
-    alert(result);
+    alert("Số nguyên tố trong mảng 2 chiều là: "+result.length+"\nGồm có: "+result);
 
     function ktSNT(so) {
         if (so >= 2) {
             for (let i = 2; i < so; i++) {
-                if (so % i == 0) {
+                if (so % i === 0) {
                     return false;
                 }
             }
             return true;
-        } else {
-            return false;
         }
     }
 </script>

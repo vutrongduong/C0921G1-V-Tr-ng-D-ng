@@ -6,19 +6,26 @@
 </head>
 <body>
 <script>
-    let arr = [
-        [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        [10, 14, 16, 20]
-    ]
+    let m = parseInt(prompt("Nhập số dòng của ma trận"));
+    let n = parseInt(prompt("Nhập số cột của ma trận"));
+    let arr = [];
     let sum = 0;
-    for (i = 0; i < arr.length; i++) {
-        for (j = 0; j < arr[i].length; j++) {
+    for (let i = 0; i < m; i++) {
+        let row = [];
+        for (let j = 0; j < n; j++) {
+            row[j] = parseInt(prompt("Nhập số vào ma trận"));
+        }
+        arr[i] = row;
+    }
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
             if (arr[i][j] % 2 === 0) {
                 sum += arr[i][j];
             }
         }
     }
-    alert(sum);
+    console.log(arr);
+    alert("Tổng các số chẵn trong ma trận là: "+sum);
 </script>
 
 </body>
